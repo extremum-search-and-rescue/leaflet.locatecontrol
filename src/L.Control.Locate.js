@@ -893,18 +893,21 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 
                 removeClasses(this._icon, this.options.icon);
                 addClasses(this._icon, this.options.iconLoading);
+                L.DomUtil.addClass(this._link, 'leaflet-control-button-pressed');
             } else if (state == 'active') {
                 removeClasses(this._container, "requesting following");
                 addClasses(this._container, "active");
 
                 removeClasses(this._icon, this.options.iconLoading);
                 addClasses(this._icon, this.options.icon);
+                L.DomUtil.addClass(this._link, 'leaflet-control-button-pressed');
             } else if (state == 'following') {
                 removeClasses(this._container, "requesting");
                 addClasses(this._container, "active following");
 
                 removeClasses(this._icon, this.options.iconLoading);
                 addClasses(this._icon, this.options.icon);
+                L.DomUtil.addClass(this._link, 'leaflet-control-button-pressed');
             }
         },
 
@@ -915,6 +918,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
             L.DomUtil.removeClass(this._container, "requesting");
             L.DomUtil.removeClass(this._container, "active");
             L.DomUtil.removeClass(this._container, "following");
+            L.DomUtil.removeClass(this._link, 'leaflet-control-button-pressed');
 
             removeClasses(this._icon, this.options.iconLoading);
             addClasses(this._icon, this.options.icon);
