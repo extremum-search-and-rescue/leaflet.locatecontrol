@@ -42,10 +42,10 @@
         locateOptions?: L.Control.LocateOptions;
     }
     class Locate extends L.Control{
-
+        _event: LocationEvent
         _onLocationFound(e: any): void;
         constructor(options: any)
-        protected _active: boolean;
+        _active: boolean;
         protected _link: HTMLDivElement;
         protected _activate(): void;
         protected _deactivate(): void;
